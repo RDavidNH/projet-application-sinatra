@@ -3,8 +3,11 @@
     <title>The Gossip Project</title>
   </head>
   <body>
-    <h1>Author: <%= gossip %></h1>
-    <a href="/gossips/new/">New gossip</a>
+    <h3>Author: <%= gossip[0] %></h3>
+    <p><%= gossip[1] %></p>
+
+    <a href="/gossips/<%= gossip[2] %>/edit">Modifier</a>
+    <a href="/">Gossip index</a>
     
   </body>
 </html>

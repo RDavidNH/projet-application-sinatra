@@ -20,12 +20,24 @@ class Gossip
   
   def self.find(id)
     
-    return id
+    CSV.foreach("./db/gossip.csv").with_index do |row, i|
+      if i + 1 == id.to_i
+        row << i + 1
+        return row
+      end
+    end
   end
 
   def save
     CSV.open("./db/gossip.csv", "ab") do |csv|
       csv << [@author, @content]
+    end
+  end
+
+  def update(id)
+    CSV.open("./db/gossip.csv", "ab") do |csv|
+      
+      
     end
   end
 end
