@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/gossip/:id' do
-    
+    erb :show, locals: {gossip: Gossip.find(1)}
   end
   
   
@@ -30,5 +30,5 @@ class ApplicationController < Sinatra::Base
     puts "Ça déchire sa mémé, bon allez je m'en vais du serveur, ciao les BGs !"
   end
 
- # run! if app_file == $0
+
 end

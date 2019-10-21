@@ -18,8 +18,8 @@ class Gossip
     return all_gossips
   end
   
-  def find()
-  
+  def self.find(id)
+    return 'test'
   end
 
   def save
