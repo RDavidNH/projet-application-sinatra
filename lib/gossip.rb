@@ -19,7 +19,8 @@ class Gossip
   end
   
   def self.find(id)
-    return 'test'
+    
+    return id
   end
 
   def save
