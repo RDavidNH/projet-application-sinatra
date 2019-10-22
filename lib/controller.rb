@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
 
   # show edit form for a gossip
   get '/gossips/:id/edit' do
-    erb :edit_gossip, locals: {id: params['id']}
+    erb :edit_gossip, locals: {gossip: Gossip.find(params['id'])}
   end
 
   # update a specific gossip

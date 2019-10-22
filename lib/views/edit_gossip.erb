@@ -5,9 +5,11 @@
   <body>
     <h1>Modifier un potin !</h1>
     <p>Modifie ton potin via le formulaire ci-dessous</p>
-    <form action='/gossips/<%= id %>/edit' method='POST'>
-      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
-      Balance ton potin : <input type='text' name='gossip_content'/><br/>
+    <form action='/gossips/<%= gossip[2] %>/edit' method='POST'>
+      Modifie ton nom :  <input type='text' name='gossip_author' value="<%= gossip[0] %>" />
+      <br/>
+      Modifie ton potin : <input type='text' name='gossip_content' value="<%= gossip[1] %>" />
+      <br/>
       <input type='submit'/>
     </form>
   </body>
